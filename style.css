@@ -1,0 +1,134 @@
+/* reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* fundo da página  */
+body {
+    background-color: #eaf7e1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    background-color: #2a6b2f;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* deixando o título #Agrinho destacado */
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* container principal com flexbox */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    flex: 1;
+}
+
+/* cada cartão (card) onde ficam imagem e texto */
+.card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* efeito de levantar o card quando o mouse passa por cima */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* as imagens ocupam toda a largura do card */
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* título dentro do card */
+.card h2 {
+    color: #1f5420;
+    margin: 1rem 1rem 0.5rem 1rem;
+    font-size: 1.5rem;
+}
+
+/* parágrafo do card */
+.card p {
+    color: #2d3e2a;
+    margin: 0 1rem 1.5rem 1rem;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #1f3b21;
+    color: #cfebcf;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p:first-child {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* DEIXANDO RESPONSIVO PARA TELAS MENORES */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        gap: 1.5rem;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+}
