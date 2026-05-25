@@ -1,6 +1,6 @@
 # Conservação do solo
 
-Projeto de desenvolvimento do concurso agrinho 20226
+Projeto de desenvolvimento do concurso agrinho 2026
 
 # Tema: 
 Conservaçaõ do solo 
